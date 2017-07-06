@@ -48,9 +48,7 @@ Developed as Simplified ROSS ([gonsie/SR](http://github.com/gonsie/SR)), this ve
   ```
   Currently, ROSS includes three submodules:
   - [ROSS-Models](http://github.com/carothersc/ROSS-Models) is a set of existing models
-  - [template-model](http://github.com/nmcglohon/template-model) is a starting place for new models
-  - [RIO](http://github.com/gonsie/RIO) is a work-in-progress checkpointing framework
-  
+  - [template-model](http://github.com/nmcglohon/template-model) is a starting place for new models  
 
 3. *Optional* Symlink your model to ROSS.
 Please [this wiki page](https://github.com/carothersc/ROSS/wiki/Constructing-the-Model) for details about creating and integrating a model with ROSS.
