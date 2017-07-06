@@ -65,6 +65,10 @@ instrumentation/st-sim-engine.c
 instrumentation/st-event-trace.c
 instrumentation/st-model-data.c)
 
+IF(USE_RIO)
+  SET(ross_srcs ${ross_srcs} rio/io-mpi.c rio/io-serialize.c)
+  INCLUDE_DIRECTORIES(rio)
+ENDIF(USE_RIO)
 
 # ROSS VERSION INFORMATION
 ## Print Date and Time at top of ROSS output
@@ -90,12 +94,6 @@ OPTION(ROSS_MEMORY "ROSS Memory Buffers (membufs)" OFF)
 IF(ROSS_MEMORY)
   SET(ross_srcs ${ross_srcs} tw-memory.c tw-memoryq.h tw-memory.h)
 ENDIF(ROSS_MEMORY)
-
-IF(USE_RIO)
-	INCLUDE_DIRECTORIES(${RIO_SOURCE_DIR})
-	MESSAGE("rio: ${RIO_SOURCE_DIR}")
-	SET(ross_srcs ${ross_srcs} ${RIO_SOURCE_DIR}/io.h)
-ENDIF(USE_RIO)
 
 # Use debugging-friendly memory allocation
 OPTION(ROSS_ALLOC_DEBUG "Use naive allocator to be more friendly to memory debugging tools" OFF)
