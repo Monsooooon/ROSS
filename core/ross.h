@@ -213,7 +213,7 @@ typedef uint64_t tw_lpid;
 #include "tw-eventq.h"
 
 #ifdef USE_RIO
-#include "../IO/io.h"
+#include "rio/io.h"
 #endif
 
 #include "ross-inline.h"
